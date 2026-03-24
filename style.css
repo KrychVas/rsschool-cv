@@ -5,15 +5,15 @@
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
-    line-height: 1.6;                
-    color: #333;                     
-    background-color: #f0f2f5; /* Трохи темніший фон для контрасту з білим листом */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f9;
     padding: 40px 20px;
 }
 
 
-header, main {
+header, main, footer {
     max-width: 850px;
     margin: 0 auto;
     background: #fff;
@@ -21,92 +21,190 @@ header, main {
 }
 
 header {
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 30px;
     text-align: center;
     border-radius: 15px 15px 0 0;
 }
 
 main {
-    padding-top: 20px;
     padding-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+footer {
+    padding: 30px 60px;
+    border-top: 1px solid #eee;
     border-radius: 0 0 15px 15px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3498db;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    margin-top: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #2980b9;
 }
 
 
 h1 {
-    font-size: 3rem;
-    color: #1a2a3a;
-    letter-spacing: -1px;
+    font-size: 2.5rem;
+    color: #2c3e50;
 }
-
-header p {
-    font-style: italic;
-    color: #5a6a7a;
-    font-size: 1.1rem;
-    margin-top: 10px;
-}
-
 
 section {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 section h2 {
     color: #2c3e50;
-    font-size: 1.25rem;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-left: 20px; 
+    letter-spacing: 1px;
+    margin-left: 30px; 
 }
 
 section p, section ul {
-    border-left: 4px solid #3498db; 
-    padding-left: 30px;            
-    margin-left: 4px;             
+    border-left: 4px solid #3498db;
+    padding-left: 25px;
+    margin-left: 4px;
 }
 
 ul { list-style: none; }
-li { margin-bottom: 10px; }
+li { margin-bottom: 8px; }
 
 
 pre {
-    background: #1e1e1e; /* VS Code Background */
+    background: #1e1e1e;
     color: #d4d4d4;
-    padding: 25px;
-    border-radius: 12px;
-    font-family: 'Consolas', 'Monaco', monospace;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    border: 1px solid #333;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Consolas', monospace;
+    font-size: 0.9rem;
     overflow-x: auto;
     margin-top: 15px;
 }
 
-
-.keyword { color: #569cd6 !important; }    
-.function { color: #dcdcaa !important; }   
-.parameter { color: #9cdcfe !important; }  
-.string { color: #ce9178 !important; }     
-.variable { color: #4fc1ff !important; }   
-.method { color: #dcdcaa !important; }     
-.comment { color: #6a9955 !important; }    
+.keyword { color: #569cd6; }
+.function { color: #dcdcaa; }
+.parameter { color: #9cdcfe; }
+.string { color: #ce9178; }
+.variable { color: #4fc1ff; }
+.method { color: #dcdcaa; }
+.comment { color: #6a9955; }
 
 
 footer {
-    max-width: 850px;
-    margin: 40px auto 0;
-    text-align: center;
-    color: #adb5bd;
-    font-size: 0.85rem;
-    padding-bottom: 40px;
+    padding: 20px 60px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 15px 15px; 
 }
 
-footer a {
-    color: #3498db;
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.github-link {
     text-decoration: none;
-    margin-left: 10px;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.github-link:hover {
+    color: #3498db;
+}
+
+
+.rs-logo {
+    width: 70px; /* або 80px */
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header, main, footer {
+        padding: 20px 30px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section h2 {
+        margin-left: 0;
+        font-size: 1.1rem;
+    }
+
+    section p, section ul {
+        margin-left: 0;
+        padding-left: 15px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    pre {
+        font-size: 0.8rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header, main, footer {
+        padding: 15px 20px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }

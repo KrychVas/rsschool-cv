@@ -117,6 +117,17 @@ pre {
 .method { color: #dcdcaa; }
 .comment { color: #6a9955; }
 
+main a {
+    color: #007acc; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+main a:hover {
+    color: #005a9e; 
+    text-decoration: underline;
+}
+
 footer {
     padding: 2rem 3.75rem;
     border-top: 1px solid #eee;

@@ -4,59 +4,60 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth; 
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f7f9;
-    padding: 40px 20px;
+    padding: 2.5rem 1.25rem;
 }
 
-
 header, main, footer {
-    max-width: 850px;
+    max-width: 53rem; /* 848px */
     margin: 0 auto;
     background: #fff;
-    padding: 0 60px;
+    padding: 0 3.75rem; /* 60px */
 }
 
 header {
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding-top: 3.125rem;
+    padding-bottom: 1.875rem;
     text-align: center;
-    border-radius: 15px 15px 0 0;
+    border-radius: 0.9rem 0.9rem 0 0;
 }
 
 main {
-    padding-bottom: 60px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding-bottom: 3.75rem;
+    box-shadow: 0 0.6rem 1.8rem rgba(0,0,0,0.05);
 }
-
-footer {
-    padding: 30px 60px;
-    border-top: 1px solid #eee;
-    border-radius: 0 0 15px 15px;
-    margin-bottom: 40px;
-}
-
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 13.75rem; /* 220px - солідне велике фото */
+    height: 13.75rem;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #3498db;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 0.3rem solid #3498db;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0.3rem 1rem rgba(0,0,0,0.1);
 }
 
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
 
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 1.5rem;
     list-style: none;
-    margin-top: 25px;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -72,44 +73,40 @@ nav a:hover {
     color: #2980b9;
 }
 
-
-h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-}
-
 section {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 section h2 {
     color: #2c3e50;
     font-size: 1.3rem;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-left: 30px; 
+    letter-spacing: 0.06rem;
+    margin-left: 1.875rem;
 }
 
 section p, section ul {
-    border-left: 4px solid #3498db;
-    padding-left: 25px;
-    margin-left: 4px;
+    border-left: 0.25rem solid #3498db; /* 4px */
+    padding-left: 1.5rem;
+    margin-left: 0.25rem;
 }
 
 ul { list-style: none; }
-li { margin-bottom: 8px; }
-
+li { margin-bottom: 0.5rem; }
 
 pre {
     background: #1e1e1e;
     color: #d4d4d4;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 0.6rem;
     font-family: 'Consolas', monospace;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     overflow-x: auto;
-    margin-top: 15px;
+    margin-top: 1rem;
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .keyword { color: #569cd6; }
@@ -120,91 +117,86 @@ pre {
 .method { color: #dcdcaa; }
 .comment { color: #6a9955; }
 
-
 footer {
-    padding: 20px 60px;
-    background: #fff;
+    padding: 2rem 3.75rem;
     border-top: 1px solid #eee;
-    border-radius: 0 0 15px 15px; 
+    border-radius: 0 0 0.9rem 0.9rem;
+    margin-bottom: 2.5rem;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
+.footer-container > * {
+    flex: 1;
+}
+
 .github-link {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    transition: color 0.3s;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.github-link:hover {
-    color: #3498db;
+.github-link img {
+    width: 5.5rem; 
+    height: auto;
+    transition: transform 0.3s;
 }
 
+.github-link:hover img {
+    transform: scale(1.1);
+}
+
+.footer-year {
+    text-align: center;
+    font-weight: 400;
+    color: #666;
+    white-space: nowrap;
+}
+
+.rs-link {
+    display: flex;
+    justify-content: flex-end;
+}
 
 .rs-logo {
-    width: 70px; /* або 80px */
+    width: 5.5rem; 
     height: auto;
-    display: block;
+    transition: transform 0.3s;
+}
+
+.rs-link:hover .rs-logo {
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
     header, main, footer {
-        padding: 20px 30px;
-        max-width: 100%;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        padding: 1.5rem 2rem;
     }
 
     section h2 {
         margin-left: 0;
-        font-size: 1.1rem;
     }
 
     section p, section ul {
         margin-left: 0;
-        padding-left: 15px;
+        padding-left: 1rem;
     }
 
     .footer-container {
         flex-direction: column;
-        gap: 15px;
+        gap: 1.5rem;
         text-align: center;
     }
 
-    pre {
-        font-size: 0.8rem;
-        padding: 15px;
+    .github-link, .rs-link {
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
-    header, main, footer {
-        padding: 15px 20px;
-    }
-
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
+    h1 { font-size: 1.8rem; }
+    .profile-photo { width: 10rem; height: 10rem; }
 }

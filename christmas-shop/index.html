@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Christmas Shop</title>
+    <link rel="icon" href="assets/icons/snowflake.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header__inner">
+          <a href="index.html" class="logo">
+            <div class="logo__icon">
+              <img src="assets/icons/logo.svg" alt="The Gifts logo">
+            </div>
+          </a>
+          <nav>
+            <ul class="nav">
+              <li><a href="gifts.html" class="nav__link">GIFTS</a></li>
+              <li><a href="#about" class="nav__link">ABOUT</a></li>
+              <li><a href="#best" class="nav__link">BEST</a></li>
+              <li><a href="#contacts" class="nav__link">CONTACTS</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main>
+
+        <!-- HERO -->
+        <section id="hero" class="hero">
+          <img
+            class="hero__ball-bg"
+            src="assets/images/bg-ball.png"
+            alt=""
+            aria-hidden="true"
+          >
+          <img
+            class="hero__garland"
+            src="assets/images/bg-garland.png"
+            alt=""
+            aria-hidden="true"
+          >
+
+          <div class="hero__content">
+            <p class="hero__tag">Merry Christmas</p>
+            <h1 class="hero__title">
+              Gift Yourself<br>
+              The Magic Of New<br>
+              Possibilities
+            </h1>
+            <a href="gifts.html" class="btn">Explore Magical Gifts</a>
+            <p class="hero__sub">and Happy New Year...</p>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about">
+          <div class="about__inner">
+            <div class="about__text">
+              <p class="about__label">About</p>
+              <h2 class="about__title">Unleash Your Inner<br>Superhero!</h2>
+              <p class="about__desc">
+                This New Year marks the beginning of your journey to inner
+                harmony and new strengths. We offer unique gifts that will help
+                you improve your life.
+              </p>
+            </div>
+            <div class="about__image">
+              <img src="assets/images/santa.png" alt="Santa and snowman">
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDER -->
+        <section id="slider" class="slider">
+          <p class="section-label">Become Happier!</p>
+          <h2 class="section-title">In The New 2025</h2>
+
+          <div class="slider__viewport">
+            <div class="slider__track" id="sliderTrack">
+              <span class="slider__word">LIVE</span>
+              <img
+                class="slider__img"
+                src="assets/images/snowman.png"
+                alt="Snowman"
+              >
+              <span class="slider__word">CREATE</span>
+              <img
+                class="slider__img"
+                src="assets/images/christmas-trees.png"
+                alt="Christmas trees"
+              >
+              <span class="slider__word">LOVE</span>
+              <img
+                class="slider__img"
+                src="assets/images/christmas-tree-ball.png"
+                alt="Christmas ball"
+              >
+              <span class="slider__word">DREAM</span>
+              <img
+                class="slider__img"
+                src="assets/images/fairytale-house.png"
+                alt="Fairytale house"
+              >
+            </div>
+          </div>
+
+          <div class="slider__nav">
+            <button
+              class="slider__btn"
+              id="sliderPrev"
+              aria-label="Previous"
+              disabled
+            >
+              &#8592;
+            </button>
+            <button class="slider__btn" id="sliderNext" aria-label="Next">
+              &#8594;
+            </button>
+          </div>
+        </section>
+
+        <!-- BEST GIFTS -->
+        <section id="best" class="best-gifts">
+          <p class="best-gifts__label">Best Gifts</p>
+          <h2 class="best-gifts__title">Especially For You</h2>
+
+          <div class="gifts-grid">
+            <article class="gift-card">
+              <img
+                class="gift-card__img"
+                src="assets/images/gift-for-work.png"
+                alt="Console.log Guru"
+              >
+              <div class="gift-card__body">
+                <p class="gift-card__tag gift-card__tag--work">For Work</p>
+                <h3 class="gift-card__name">Console.log Guru</h3>
+              </div>
+            </article>
+
+            <article class="gift-card">
+              <img
+                class="gift-card__img"
+                src="assets/images/gift-for-health.png"
+                alt="Hydration Bot"
+              >
+              <div class="gift-card__body">
+                <p class="gift-card__tag gift-card__tag--health">For Health</p>
+                <h3 class="gift-card__name">Hydration Bot</h3>
+              </div>
+            </article>
+
+            <article class="gift-card">
+              <img
+                class="gift-card__img"
+                src="assets/images/gift-for-work.png"
+                alt="Merge Master"
+              >
+              <div class="gift-card__body">
+                <p class="gift-card__tag gift-card__tag--work">For Work</p>
+                <h3 class="gift-card__name">Merge Master</h3>
+              </div>
+            </article>
+
+            <article class="gift-card">
+              <img
+                class="gift-card__img"
+                src="assets/images/gift-for-harmony.png"
+                alt="Spontaneous Coding Philosopher"
+              >
+              <div class="gift-card__body">
+                <p class="gift-card__tag gift-card__tag--harmony">For Harmony</p>
+                <h3 class="gift-card__name">Spontaneous Coding Philosopher</h3>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta" class="cta">
+          <div class="cta__inner">
+            <h2 class="cta__title">
+              Ready To Start Your Journey To A Better Version Of Yourself?
+            </h2>
+            <a href="gifts.html" class="btn">Explore Magical Gifts</a>
+            <p class="cta__tag">The New Year is Coming Soon...</p>
+            <div class="countdown">
+              <div class="countdown__block">
+                <div class="countdown__num" id="cd-days">00</div>
+                <div class="countdown__label">Days</div>
+              </div>
+              <div class="countdown__block">
+                <div class="countdown__num" id="cd-hours">00</div>
+                <div class="countdown__label">Hours</div>
+              </div>
+              <div class="countdown__block">
+                <div class="countdown__num" id="cd-mins">00</div>
+                <div class="countdown__label">Minutes</div>
+              </div>
+              <div class="countdown__block">
+                <div class="countdown__num" id="cd-secs">00</div>
+                <div class="countdown__label">Seconds</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta__scene">
+            <img
+              class="cta__forest-bg"
+              src="assets/images/bg-forest.png"
+              alt=""
+              aria-hidden="true"
+            >
+          </div>
+        </section>
+
+      </main>
+
+      <!-- FOOTER -->
+      <footer id="contacts" class="footer">
+        <div class="footer__cards">
+          <a href="tel:+375291112233" class="footer__card">
+            <div class="footer__card-icon">
+              <img src="assets/icons/santa-claus.svg" alt="Call us">
+            </div>
+            <p class="footer__card-main">+375 (29) 111-22-33</p>
+            <p class="footer__card-sub">Call Us</p>
+          </a>
+
+          <a
+            href="https://maps.google.com/?q=Bialowieza+Forest,+Poland"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer__card"
+          >
+            <div class="footer__card-icon">
+              <img src="assets/icons/christmas-tree.svg" alt="Magic Forest">
+            </div>
+            <p class="footer__card-main">Magic Forest</p>
+            <p class="footer__card-sub">Meet Us</p>
+          </a>
+
+          <a href="mailto:gifts@magic.com" class="footer__card">
+            <div class="footer__card-icon">
+              <img src="assets/icons/snake.svg" alt="Write us">
+            </div>
+            <p class="footer__card-main">gifts@magic.com</p>
+            <p class="footer__card-sub">Write Us</p>
+          </a>
+        </div>
+
+        <div class="footer__bottom">
+          <ul class="footer__socials">
+            <li>
+              <a
+                href="#"
+                class="footer__social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+              >
+                <img src="assets/icons/social-telegr.svg" alt="" width="20" height="20">
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <img src="assets/icons/social-faceb.svg" alt="" width="20" height="20">
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <img src="assets/icons/social-instag.svg" alt="" width="20" height="20">
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="footer__social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+              >
+                <img src="assets/icons/social-x.svg" alt="" width="20" height="20">
+              </a>
+            </li>
+          </ul>
+          <p class="footer__copy">© Copyright 2025, All Rights Reserved</p>
+          <p class="footer__made">
+            <a
+              href="https://rs.school/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Made in Rolling Scopes School
+            </a>
+          </p>
+        </div>
+      </footer>
+
+    </div>
+    <!-- /.page-wrapper -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -365,34 +365,33 @@ slider__viewport {
     transform: scale(1.05);
 }
 
-/* Основний контейнер для сторінки Gifts */
+
 .gifts-main {
-    background-color: var(--color-white); /* Простір навколо буде білим */
+    background-color: var(--color-white); 
     padding: 0; 
 }
 
 .gifts-section {
     background-color: var(--color-red);
-    background-image: url('assets/images/bg-snow.png'); /* Додаємо сніжинки */
+    background-image: url('assets/images/bg-snow.png'); 
     background-repeat: repeat;
-    /* Закруглення кутів як на Hero (+6 балів за відповідність дизайну) */
+    
     border-radius: 40px; 
-    margin: 0 82px 60px; /* Відступи з боків (82px) та знизу до футера */
+    margin: 0 82px 60px; 
     padding: 60px 0;
     text-align: center;
 }
 
 .gifts-section__title {
     color: #FFFFFF;
-    font-size: 32px; /* Трохи збільшив для відповідності візуалу */
+    font-size: 32px; 
     font-weight: 450;
     line-height: 1.2;
     text-transform: uppercase;
     margin-bottom: 24px;
-    padding: 0 40px; /* Щоб текст не лип до країв */
+    padding: 0 40px; 
 }
 
-/* Виправлення для табів */
 .gifts-tabs {
     display: flex;
     justify-content: center;
@@ -401,7 +400,7 @@ slider__viewport {
 }
 
 .gifts-tabs__btn {
-    background-color: transparent; /* У Figma зазвичай прозорі з білим текстом або білі */
+    background-color: transparent; 
     color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 8px 16px;
@@ -419,13 +418,13 @@ slider__viewport {
 }
 
 .gifts-tabs__btn--active {
-    background-color: rgba(255, 255, 255, 0.2); /* Ефект активної кнопки */
+    background-color: rgba(255, 255, 255, 0.2); 
     border-color: #FFFFFF;
-    pointer-events: none; /* Важливо для RS School (+2 бали) */
+    pointer-events: none; 
     cursor: default;
 }
 
-/* Гірлянда (якщо є на скріні зверху) */
+
 .gifts-section {
     position: relative;
 }
@@ -436,8 +435,7 @@ slider__viewport {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
-    background: url('assets/images/bg-garland.png') repeat-x top center;
+    height: 60px;  
     background-size: contain;
     pointer-events: none;
 }

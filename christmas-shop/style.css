@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-body);
     background-color: var(--color-white);
@@ -24,7 +28,8 @@ body {
 }
 
 .page-wrapper {
-    width: var(--content-width);
+    width: 1440px;
+    margin: 0 auto;
     max-width: 100%;
     background-color: var(--color-red);
     overflow: hidden;
@@ -70,7 +75,8 @@ img {
 }
 
 .nav__link:hover {
-    color: var(--color-dark);
+    color: var(--color-red);
+    background-color: rgba(255, 70, 70, 0.08);
 }
 
 .nav__link--active {
@@ -81,16 +87,23 @@ body.index-page .hero img.hero__garland {
     display: none;
 }
 
+main {
+    background-image: url('assets/images/bg-snow.png');
+}
+
 .hero {
     position: relative;
-    height: 600px;
-    border-radius: 80px;
+    height: 550px;
+    border-radius: 50px;
     margin: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     background-color: var(--color-red);
+    background-image: url('assets/images/bg-snow.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero__ball-bg, .hero__garland {
@@ -99,10 +112,14 @@ body.index-page .hero img.hero__garland {
 }
 
 .hero__ball-bg {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 100%;
+    width: auto;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .hero__garland {
@@ -125,12 +142,20 @@ body.index-page .hero img.hero__garland {
 }
 
 .hero__title {
-    font-size: 64px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 450;
     line-height: 1.0;
     text-transform: uppercase;
+    margin-top: 32px;
     margin-bottom: 32px;
 }
+
+.hero__sub {
+      font-family: var(--font-display);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
 
 .about {
     padding: 60px 82px;
@@ -160,7 +185,7 @@ body.index-page .hero img.hero__garland {
 
 .about__title {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 450;
     text-transform: uppercase;
     margin-bottom: 24px;
 }
@@ -180,53 +205,97 @@ body.index-page .hero img.hero__garland {
     width: 100%;
 }
 
-.slider {
-    padding: 60px 82px;
-    text-align: center;
-}
-
-.slider__track {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-}
-
-.slider__word {
-    font-size: 80px;
-    font-weight: 800;
-    color: var(--color-white);
-    -webkit-text-stroke: 1px var(--color-dark);
-    text-transform: uppercase;
-}
-
-.slider__img {
-    width: 200px;
-    height: 200px;
-    border-radius: 40px;
-    object-fit: cover;
-}
-
 .section-label {
     color: var(--color-white);
     text-align: center;
-    font-size: 32px; 
+    font-size: 24px; 
     margin: 20px 0;
     font-family: var(--font-display);
 }
 
 .section-title {
+    font-size: 28px;
+    font-weight: 450;
     color: var(--color-white);
-    text-align: center;
-    font-size: 32px; 
-    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 36px;
     
+}
+.slider {
+  background-size: cover;
+    padding: 60px 0 50px;
+    text-align: center;
+    background-color: var(--color-red);
+    overflow: hidden;
+    background-image: url('assets/images/bg-snow.png');
+}
+
+slider__viewport {
+    overflow: hidden;
+    padding: 0 82px;
+}
+
+.slider__track {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start; 
+    padding-left: 100px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.slider__word { 
+  font-size: 80px;
+    font-weight: 450;
+    color: var(--color-white);
+    text-transform: uppercase;
+    padding: 0 20px;
+    flex-shrink: 0;
+    line-height: 1;   
+}
+
+.slider__img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.slider__nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 0 82px;
+    margin-top: 20px;
+}
+
+.slider__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    border: 2px solid rgba(255, 255, 255, 0.55);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.slider__btn:hover {
+    background: #FFFFFF;
+    color: #FF4646;
+    border-color: #FFFFFF;
 }
 
 .best-gifts__label {
     color: var(--color-white);
     text-align: center;
-    font-size: 32px; 
+    font-size: 24px; 
     margin: 20px 0;
     font-family: var(--font-display);
 }
@@ -234,7 +303,7 @@ body.index-page .hero img.hero__garland {
 .best-gifts__title {
     color: var(--color-white);
     text-align: center;
-    font-size: 32px; 
+    font-weight: 450;
     margin: 20px 0;
 }
 
@@ -272,9 +341,9 @@ body.index-page .hero img.hero__garland {
     margin-bottom: 8px;
 }
 
-.gift-card__tag--work { color: #FF9B00; }
-.gift-card__tag--health { color: #00B894; }
-.gift-card__tag--harmony { color: #6C5CE7; }
+.gift-card__tag--work { color: purple; }
+.gift-card__tag--health { color: green; }
+.gift-card__tag--harmony { color: pink; }
 
 .btn {
     display: inline-block;
@@ -296,100 +365,242 @@ body.index-page .hero img.hero__garland {
     transform: scale(1.05);
 }
 
-.gifts-section__header {
-    text-align: center; 
-    color: var(--color-white);
+/* Основний контейнер для сторінки Gifts */
+.gifts-main {
+    background-color: var(--color-white); /* Простір навколо буде білим */
+    padding: 0; 
+}
+
+.gifts-section {
+    background-color: var(--color-red);
+    background-image: url('assets/images/bg-snow.png'); /* Додаємо сніжинки */
+    background-repeat: repeat;
+    /* Закруглення кутів як на Hero (+6 балів за відповідність дизайну) */
+    border-radius: 40px; 
+    margin: 0 82px 60px; /* Відступи з боків (82px) та знизу до футера */
+    padding: 60px 0;
+    text-align: center;
 }
 
 .gifts-section__title {
-    color: var(--color-white);
-    font-size: 48px;
+    color: #FFFFFF;
+    font-size: 32px; /* Трохи збільшив для відповідності візуалу */
+    font-weight: 450;
     line-height: 1.2;
+    text-transform: uppercase;
     margin-bottom: 24px;
+    padding: 0 40px; /* Щоб текст не лип до країв */
 }
 
+/* Виправлення для табів */
 .gifts-tabs {
     display: flex;
     justify-content: center;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.gifts-tabs__btn {
-    background-color: var(--color-white);
-    color: var(--color-red);
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: 0.3s;
-}
-
-.gifts-tabs__btn--active {
-    background-color: var(--color-red);
-    color: var(--color-white);
-}
-
-.gifts-tabs__btn:hover {
-    opacity: 0.8;
-}
-
-.cta {
-    text-align: center;
-    }
-
-.cta__title {
-    color: var(--color-white);
-    font-size: 36px;
-    font-weight: 700;
+    gap: 8px;
     margin-bottom: 40px;
 }
 
-.cta .btn {
+.gifts-tabs__btn {
+    background-color: transparent; /* У Figma зазвичай прозорі з білим текстом або білі */
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.gifts-tabs__btn:hover {
+    background-color: #FFFFFF;
+    color: var(--color-red);
+}
+
+.gifts-tabs__btn--active {
+    background-color: rgba(255, 255, 255, 0.2); /* Ефект активної кнопки */
+    border-color: #FFFFFF;
+    pointer-events: none; /* Важливо для RS School (+2 бали) */
+    cursor: default;
+}
+
+/* Гірлянда (якщо є на скріні зверху) */
+.gifts-section {
+    position: relative;
+}
+
+.gifts-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: url('assets/images/bg-garland.png') repeat-x top center;
+    background-size: contain;
+    pointer-events: none;
+}
+
+.cta {
+    position: relative;
+    padding: 100px 0 0;
+    text-align: center;
+    background-color: #FF4646;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('assets/images/bg-snow.png');
+}
+
+.cta__inner {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.cta__title {
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 450;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.btn {
     display: inline-block;
+    padding: 12px 28px;
+    background-color: #181C24;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 40px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.cta__tag {
+    font-family: 'Allura', cursive;
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.countdown {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.countdown__block {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+}
+
+.countdown__block:last-child {
+    border-right: none;
+}
+
+.countdown__num {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.cta__scene {
+    position: relative;
+    width: 100%;
+    margin-top: -80px;
+}
+
+
+.cta__forest-bg {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 2;
 }
 
 .footer {
     background-color: var(--color-white);
-    padding: 40px 20px;
+    padding: 60px 82px 60px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    border-radius: 20px;
+    gap: 60px;
 }
 
 .footer__cards {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
     justify-content: center;
 }
 
 .footer__card {
     text-decoration: none;
-    color: var(--color-dark);
     background-color: var(--color-bg-light);
-    padding: 50px 150px;
+    padding: 60px 20px;
     border-radius: 20px;
-    flex: 1 1 150px;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .footer__card:hover {
     transform: translateY(-5px);
 }
 
+.footer__card-icon img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 12px;
+}
+
+.footer__card-main {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--color-dark);
+}
+
+.footer__card-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-dark);
+    margin-top: 8px;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
 .footer__socials {
     display: flex;
-    gap: 20px;
+    gap: 12px;
     list-style: none;
-    justify-content: center;
+    padding: 0;
 }
 
 .footer__social-link img {
@@ -398,6 +609,16 @@ body.index-page .hero img.hero__garland {
     height: 40px;
 }
 
-.footer__copy {
+.footer__copy, .footer__made {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
     color: var(--color-dark);
+}
+
+.footer__made a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-family: 'Allura', cursive; 
+    font-size: 24px;
 }

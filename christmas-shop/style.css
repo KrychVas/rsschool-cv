@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* -- BASE --*/
+/* -- BASE -- */
 html {
     scroll-behavior: smooth;
 }
@@ -92,11 +92,6 @@ ul {
     transition: color 0.3s, background-color 0.3s;
 }
 
-.nav__link:hover:not(.nav__link--active) {
-    color: #ff4646;
-    background-color: rgba(255, 70, 70, 0.1);
-}
-
 .nav__link--active {
     color: #aaaaaa;
     cursor: default;
@@ -108,7 +103,8 @@ ul {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 235px;
+    width: fit-content;
+    min-width: 235px;
     height: 56px;
     background-color: #181C24;
     color: #ffffff;
@@ -121,11 +117,6 @@ ul {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-}
-
-.btn:hover {
-    background-color: #ffffff;
-    color: #181C24;
 }
 
 /* -- HERO -- */
@@ -370,12 +361,6 @@ ul {
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.slider__btn:hover:not(:disabled) {
-    background-color: #ffffff;
-    color: #ff4646;
-    border-color: #ffffff;
-}
-
 .slider__btn:disabled {
     opacity: 0.3;
     cursor: default;
@@ -430,14 +415,6 @@ ul {
     cursor: pointer;
     overflow: hidden;
     transition: box-shadow 0.3s;
-}
-
-.gift-card:hover {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-}
-
-.gift-card:hover .gift-card__name {
-    color: #ff4646;
 }
 
 .gift-card__img {
@@ -619,15 +596,6 @@ ul {
     transition: box-shadow 0.3s;
 }
 
-.footer__card:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.footer__card:hover .footer__card-main,
-.footer__card:hover .footer__card-sub {
-    color: #ff4646;
-}
-
 .footer__card-icon {
     width: 80px;
     height: 80px;
@@ -690,15 +658,6 @@ ul {
     transition: background-color 0.3s;
 }
 
-.footer__social-link:hover {
-    background-color: rgba(255, 70, 70, 0.1);
-}
-
-.footer__social-link:hover img {
-    filter: invert(30%) sepia(90%) saturate(400%) hue-rotate(320deg);
-    transition: filter 0.3s;
-}
-
 .footer__copy {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -721,10 +680,6 @@ ul {
 .footer__made a {
     color: #181C24;
     transition: color 0.3s;
-}
-
-.footer__made a:hover {
-    color: #ff4646;
 }
 
 /* -- GIFTS PAGE -- */
@@ -781,11 +736,6 @@ ul {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-.gifts-tabs__btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: #ffffff;
-}
-
 .gifts-tabs__btn--active {
     background-color: #ffffff;
     color: #ff4646;
@@ -801,7 +751,7 @@ ul {
     padding: 0 82px;
 }
 
-/* -- Back to top button -- */
+/* -- BACK TO TOP -- */
 .back-to-top {
     position: fixed;
     bottom: 40px;
@@ -824,11 +774,6 @@ ul {
 
 .back-to-top.visible {
     display: flex;
-}
-
-.back-to-top:hover {
-    background-color: #ff4646;
-    color: #ffffff;
 }
 
 /* -- BURGER MENU -- */
@@ -867,7 +812,6 @@ ul {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* --Mobile menu */
 .nav-mobile {
     display: none;
     position: absolute;
@@ -894,20 +838,80 @@ ul {
     text-align: center;
 }
 
-/* -- MEDIA — 768px -- */
+/* ============================================================
+   HOVER — тільки на desktop
+   ============================================================ */
+@media (hover: hover) and (pointer: fine) {
+
+    .nav__link:hover:not(.nav__link--active) {
+        color: #ff4646;
+        background-color: rgba(255, 70, 70, 0.1);
+    }
+
+    .btn:hover {
+        background-color: #ffffff;
+        color: #181C24;
+    }
+
+    .slider__btn:hover:not(:disabled) {
+        background-color: #ffffff;
+        color: #ff4646;
+        border-color: #ffffff;
+    }
+
+    .gift-card:hover {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .gift-card:hover .gift-card__name {
+        color: #ff4646;
+    }
+
+    .footer__card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer__card:hover .footer__card-main,
+    .footer__card:hover .footer__card-sub {
+        color: #ff4646;
+    }
+
+    .footer__social-link:hover {
+        background-color: rgba(255, 70, 70, 0.1);
+    }
+
+    .footer__social-link:hover img {
+        filter: invert(30%) sepia(90%) saturate(400%) hue-rotate(320deg);
+    }
+
+    .footer__made a:hover {
+        color: #ff4646;
+    }
+
+    .gifts-tabs__btn:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: #ffffff;
+    }
+
+    .back-to-top:hover {
+        background-color: #ff4646;
+        color: #ffffff;
+    }
+}
+
+/* ============================================================
+   MEDIA — 768px
+   ============================================================ */
 @media (max-width: 768px) {
 
-    /* PAGE WRAPPER */
     .page-wrapper {
         width: 100%;
     }
 
-    /* HEADER */
     .header__inner {
         padding: 0 20px;
     }
 
-    /* Hide the regular menu, show the burger */
     .nav {
         display: none;
     }
@@ -916,27 +920,40 @@ ul {
         display: flex;
     }
 
-    /* HERO */
     .hero {
         min-height: 400px;
         border-radius: 12px 12px 0 0;
-        margin: 0;
+    }
+
+    .hero__ball-bg {
+        height: 100%;
+        width: auto;
+        max-width: none;
     }
 
     .hero__content {
         width: 90%;
         max-width: 90%;
         padding: 40px 20px;
+        box-sizing: border-box;
     }
 
     .hero__title {
-        font-size: 24px;
-        letter-spacing: 0.1em;
+        font-size: 22px;
+        letter-spacing: 0.08em;
+        word-break: break-word;
     }
 
-    /* ABOUT */
+    .btn {
+        min-width: auto;
+        width: auto;
+        padding: 14px 24px;
+        white-space: nowrap;
+        font-size: 11px;
+    }
+
     .about {
-        padding: 20px 20px;
+        padding: 20px;
     }
 
     .about__inner {
@@ -949,19 +966,19 @@ ul {
     .about__text {
         width: 100%;
         max-width: 100%;
-        padding: 40px 32px;
+        padding: 32px 24px;
     }
 
     .about__image {
         width: 100%;
         height: 300px;
+        flex-shrink: 0;
     }
 
     .about__image img {
         border-radius: 0 0 20px 20px;
     }
 
-    /* SLIDER */
     .slider {
         height: auto;
         padding-bottom: 40px;
@@ -984,7 +1001,6 @@ ul {
         padding-right: 20px;
     }
 
-    /* BEST GIFTS */
     .best-gifts {
         height: auto;
         padding-bottom: 40px;
@@ -1001,7 +1017,6 @@ ul {
         width: 100%;
     }
 
-    /* CTA */
     .cta {
         padding: 40px 20px 0;
     }
@@ -1012,7 +1027,6 @@ ul {
         padding-top: 20px;
     }
 
-    /* FOOTER */
     .footer {
         padding: 40px 20px;
     }
@@ -1032,7 +1046,6 @@ ul {
         font-size: 18px;
     }
 
-    /* GIFTS PAGE */
     .gifts-section__header {
         padding: 40px 20px 32px;
     }
@@ -1047,10 +1060,20 @@ ul {
     }
 }
 
-/* -- MEDIA — 380px -- */
+/* ============================================================
+   MEDIA — 380px
+   ============================================================ */
 @media (max-width: 380px) {
 
-    /* HEADER */
+    body {
+        overflow-x: hidden;
+    }
+
+    .page-wrapper {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .header {
         height: 60px;
     }
@@ -1063,19 +1086,29 @@ ul {
         top: 60px;
     }
 
-    /* HERO */
     .hero {
         min-height: 320px;
+        border-radius: 0;
+    }
+
+    .hero__ball-bg {
+        height: 100%;
+        width: auto;
+        max-width: none;
     }
 
     .hero__content {
+        width: 85%;
+        max-width: 85%;
         padding: 32px 16px;
         gap: 8px;
+        box-sizing: border-box;
     }
 
     .hero__title {
-        font-size: 18px;
-        letter-spacing: 0.08em;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        word-break: break-word;
     }
 
     .hero__tag,
@@ -1083,18 +1116,35 @@ ul {
         font-size: 20px;
     }
 
-    /* ABOUT */
+    .btn {
+        min-width: auto;
+        width: auto;
+        padding: 12px 20px;
+        white-space: nowrap;
+        font-size: 10px;
+    }
+
     .about {
         padding: 16px;
     }
 
+    .about__inner {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
     .about__text {
+        width: 100%;
+        max-width: 100%;
         padding: 24px 20px;
         gap: 12px;
     }
 
     .about__title {
         font-size: 18px;
+        letter-spacing: 0.08em;
     }
 
     .about__desc {
@@ -1102,10 +1152,19 @@ ul {
     }
 
     .about__image {
+        width: 100%;
         height: 220px;
     }
 
-    /* SLIDER */
+    .about__image img {
+        border-radius: 0 0 20px 20px;
+    }
+
+    .slider {
+        height: auto;
+        padding-bottom: 32px;
+    }
+
     .section-label {
         padding-top: 32px;
         font-size: 20px;
@@ -1113,6 +1172,7 @@ ul {
 
     .section-title {
         font-size: 18px;
+        padding: 0 16px;
     }
 
     .slider__viewport {
@@ -1120,41 +1180,53 @@ ul {
     }
 
     .slider__word {
-        font-size: 36px;
+        font-size: 32px;
+        padding: 0 10px;
     }
 
     .slider__img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .slider__btn {
-        width: 40px;
-        height: 40px;
+        width: 90px;
+        height: 90px;
     }
 
     .slider__nav {
         padding-right: 16px;
     }
 
-    /* BEST GIFTS */
+    .best-gifts {
+        height: auto;
+        padding-bottom: 32px;
+    }
+
     .best-gifts__label {
         font-size: 20px;
+        padding-top: 32px;
     }
 
     .best-gifts__title {
         font-size: 18px;
+        padding: 0 16px;
     }
 
     .gifts-grid {
         grid-template-columns: 1fr;
         padding: 0 16px;
+        gap: 12px;
     }
 
-    /* CTA */
+    .gift-card {
+        width: 100%;
+    }
+
+    .cta {
+        padding: 32px 16px 0;
+    }
+
     .cta__title {
+        width: 100%;
         font-size: 16px;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.08em;
+        padding-top: 0;
     }
 
     .cta__tag {
@@ -1163,17 +1235,41 @@ ul {
 
     .countdown {
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
+        gap: 0;
     }
 
-    /* FOOTER */
+    .countdown__block {
+        padding: 0 10px;
+        min-width: auto;
+    }
+
+    .countdown__num {
+        font-size: 20px;
+    }
+
+    .countdown__label {
+        font-size: 9px;
+    }
+
     .footer {
         padding: 32px 16px;
     }
 
+    .footer__cards {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .footer__card {
+        width: 100%;
+        height: auto;
+        padding: 24px 16px;
+    }
+
     .footer__card-main {
         font-size: 16px;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.06em;
     }
 
     .footer__card-sub {
@@ -1188,14 +1284,13 @@ ul {
         font-size: 20px;
     }
 
-    /* GIFTS PAGE */
     .gifts-section__header {
         padding: 24px 16px 20px;
     }
 
     .gifts-section__title {
         font-size: 20px;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.08em;
     }
 
     .gifts-tabs {

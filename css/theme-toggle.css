@@ -1,0 +1,42 @@
+/* ===== Theme toggle button ===== */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: inherit;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.theme-toggle:active {
+  transform: scale(0.92);
+}
+
+/* Show only the icon that matches the active theme */
+.theme-toggle__icon {
+  display: none;
+}
+
+:root[data-theme="light"] .theme-toggle__icon--light {
+  display: inline;
+}
+
+:root[data-theme="dark"] .theme-toggle__icon--dark {
+  display: inline;
+}

@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CV of Vasyl Krychfalushii — Junior Fullstack Developer"
+    />
+    <title>Vasyl Krychfalushii — CV</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="apple-touch-icon" href="img/favicon.svg" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- highlight.js — VS Code-like syntax highlighting for the code example -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11/build/styles/atom-one-dark.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img
+          class="header__photo"
+          src="img/my-photo.jpeg"
+          alt="Photo of Vasyl Krychfalushii"
+          width="130"
+          height="130"
+        />
+        <div class="header__info">
+          <h1 class="header__name">Vasyl Krychfalushii</h1>
+          <p class="header__position">
+            Junior Fullstack Developer | RS School Trainee
+          </p>
+          <nav class="nav" aria-label="Main navigation">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#about">About</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#skills">Skills</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#projects">Projects</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#education">Education</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#languages">Languages</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          id="theme-toggle"
+          aria-label="Switch color theme"
+          title="Switch color theme"
+        >
+          <span
+            class="theme-toggle__icon theme-toggle__icon--light"
+            aria-hidden="true"
+            >&#9728;</span
+          >
+          <span
+            class="theme-toggle__icon theme-toggle__icon--dark"
+            aria-hidden="true"
+            >&#9790;</span
+          >
+        </button>
+      </header>
+
+      <main class="main">
+        <section class="section" id="about" tabindex="-1">
+          <h2 class="section__title">About Me</h2>
+          <p class="section__text">
+            Motivated Junior Fullstack Developer based in Prague. Currently
+            advancing in the
+            <strong>Full-Stack JavaScript 2026 Q3</strong> program at RS School.
+            Experienced in developing interactive single-page applications,
+            working with asynchronous code, REST APIs, TypeScript, and modern
+            build tools (Vite). Proven ability to deliver real-world production
+            websites and strong performance in intensive developer bootcamps.
+          </p>
+        </section>
+
+        <section class="section" id="skills" tabindex="-1">
+          <h2 class="section__title">Skills</h2>
+
+          <article class="skills-group">
+            <h3 class="section__subtitle">Technical Skills</h3>
+            <ul class="skills">
+              <li class="skills__item">
+                <strong>Languages &amp; Core:</strong> JavaScript (ES6+),
+                TypeScript, HTML5, CSS3, Semantic &amp; Responsive Web Design,
+                BEM Methodology
+              </li>
+              <li class="skills__item">
+                <strong>Frameworks &amp; Tools:</strong> Vite, Node.js, npm,
+                ESLint, Git, GitHub, VS Code, WebStorm
+              </li>
+              <li class="skills__item">
+                <strong>Integrations &amp; APIs:</strong> REST API, EmailJS /
+                Formspree API, Web Audio API, LocalStorage API
+              </li>
+              <li class="skills__item">
+                <strong>Deployment &amp; Hosting:</strong> GitHub Pages, Netlify
+              </li>
+              <li class="skills__item">
+                <strong>UI/UX &amp; Design:</strong> Figma, Adobe Photoshop
+              </li>
+            </ul>
+          </article>
+
+          <article class="skills-group">
+            <h3 class="section__subtitle">Soft Skills</h3>
+            <ul class="skills">
+              <li class="skills__item">
+                Analytical Problem-Solving &amp; Self-Discipline
+              </li>
+              <li class="skills__item">
+                Client &amp; Requirement Understanding
+              </li>
+              <li class="skills__item">
+                Effective Teamwork &amp; Code Review Practices
+              </li>
+              <li class="skills__item">
+                Fast Learner &amp; Solution-Oriented Mindset
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section" id="projects" tabindex="-1">
+          <h2 class="section__title">Featured Projects</h2>
+
+          <article class="project">
+            <h3 class="project__title">
+              <a
+                class="project__link"
+                href="https://github.com/KrychVas/not-fight-club"
+                >Not Fight Club</a
+              >
+            </h3>
+            <p class="project__stack">
+              <strong>Tech Stack:</strong> Pure Vanilla JavaScript (ES6+
+              Modules), HTML5, CSS3, Web Audio API, LocalStorage
+            </p>
+            <p class="project__desc">
+              Interactive turn-based RPG fighting game (300/300 pts) featuring
+              custom RPG artifacts, audio engine with sound effects/BGM, hotkey
+              keyboard controls, full battle state persistence, and dynamic
+              arena themes. Built with 100% Vanilla JS without external
+              frameworks.
+            </p>
+            <a
+              class="project__demo"
+              href="https://KrychVas.github.io/not-fight-club/"
+              >Live Demo</a
+            >
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">
+              <a
+                class="project__link"
+                href="https://github.com/KrychVas/shelter"
+                >Cozy House — Shelter for Pets</a
+              >
+            </h3>
+            <p class="project__stack">
+              <strong>Tech Stack:</strong> JavaScript, HTML5 (BEM Methodology,
+              W3C Valid), CSS3 (Flexbox, CSS Grid)
+            </p>
+            <p class="project__desc">
+              Pixel-perfect, responsive multipage web application (110/110 pts)
+              for a pet shelter. Built using BEM methodology, smooth interactive
+              slider mechanics, custom pagination, and strict design specs.
+            </p>
+            <a
+              class="project__demo"
+              href="https://KrychVas.github.io/shelter/shelter/pages/main/"
+              >Live Demo</a
+            >
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">
+              <a
+                class="project__link"
+                href="https://github.com/KrychVas/async-race"
+                >Async Race</a
+              >
+            </h3>
+            <p class="project__stack">
+              <strong>Tech Stack:</strong> Pure TypeScript, REST API,
+              Async/Await, HTML5 Audio, LocalStorage, CSS3
+            </p>
+            <p class="project__desc">
+              Interactive SPA for animating car races via REST API server
+              (600/600 pts). Built with pure TypeScript without external
+              frameworks. Features full CRUD, random car generation (100 per
+              click), realistic animation with break effects, custom SVG car
+              icons, sound effects engine, winners table sorting, and garage
+              management.
+            </p>
+            <a
+              class="project__demo"
+              href="https://KrychVas.github.io/async-race/"
+              >Live Demo</a
+            >
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">
+              <a
+                class="project__link"
+                href="https://github.com/KrychVas/cssMemeSlider"
+                >RSS Pure CSS Meme Slider</a
+              >
+            </h3>
+            <p class="project__stack">
+              <strong>Tech Stack:</strong> Pure HTML5, CSS3 (Flexbox,
+              Animations, Radio Selectors, Custom Properties)
+            </p>
+            <p class="project__desc">
+              Fully responsive meme slider built exclusively using HTML5 and
+              CSS3 without JavaScript. Features CSS-driven slide switching via
+              radio inputs, smooth text captions animation, and pixel-perfect
+              design matching.
+            </p>
+            <a
+              class="project__demo"
+              href="https://krychvas.github.io/cssMemeSlider/index.html"
+              >Live Demo</a
+            >
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">
+              <a
+                class="project__link"
+                href="https://github.com/KrychVas/podcast-player"
+                >Podcast Player</a
+              >
+            </h3>
+            <p class="project__stack">
+              <strong>Tech Stack:</strong> TypeScript, HTML5 Audio API, REST
+              API, Async/Await, CSS3
+            </p>
+            <p class="project__desc">
+              Interactive media player application built with TypeScript.
+              Features custom audio controls, dynamic content streaming, and
+              responsive UI.
+            </p>
+            <a
+              class="project__demo"
+              href="https://krychvas.github.io/podcast-player/"
+              >Live Demo</a
+            >
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">
+              <a
+                class="project__link"
+                href="https://github.com/KrychVas/autosklo-drive-redesign"
+                >Autosklo Drive — Modern Website Redesign</a
+              >
+            </h3>
+            <p class="project__stack">
+              <strong>Tech Stack:</strong> JavaScript (ES6+ Modules), Vite,
+              HTML5, CSS3, EmailJS/Formspree API
+            </p>
+            <p class="project__desc">
+              Modern, responsive web application redesign for an auto glass
+              repair &amp; replacement service in Prague. Features interactive
+              booking form with phone validation, anti-spam protection, and dark
+              automotive UI/UX style.
+            </p>
+            <a
+              class="project__demo"
+              href="https://krychvas.github.io/autosklo-drive-redesign/"
+              >Live Demo</a
+            >
+          </article>
+        </section>
+
+        <section class="section" id="code" tabindex="-1">
+          <h2 class="section__title">Code Example</h2>
+          <p class="section__text">
+            JavaScript function demonstrating template strings:
+          </p>
+          <pre
+            class="code"
+          ><code class="language-javascript">function greetStudent(name, course) {
+  return `Hello ${name}, welcome to ${course}! Keep coding and growing.`;
+}
+
+console.log(greetStudent('Vasyl', 'RS School Full-Stack JavaScript 2026 Q3'));
+// Output: Hello Vasyl, welcome to RS School Full-Stack JavaScript 2026 Q3! Keep coding and growing.</code></pre>
+        </section>
+
+        <section class="section" id="education" tabindex="-1">
+          <h2 class="section__title">Education &amp; Certifications</h2>
+          <ul class="education">
+            <li class="education__item">
+              <strong>RS School — Full-Stack JavaScript 2026 Q3</strong>
+              <span class="education__status"
+                >In progress (Active student)</span
+              >
+            </li>
+            <li class="education__item">
+              <strong>RS School — JS/FE Summer Bootcamp 2026 Q2</strong>
+              <span class="education__status"
+                >Completed</span
+              >
+              <a
+                class="education__link"
+                href="https://app.rs.school/certificate/wddoc7tz"
+                >View Certificate</a
+              >
+            </li>
+            <li class="education__item">
+              <strong>RS School — JS/FE Pre-School 2026 Q1</strong>
+              <span class="education__status"
+                >Completed</span
+              >
+            </li>
+            <li class="education__item">
+              <strong>Stepik — HTML CSS JS (lite) by WEB HACKER</strong>
+              <span class="education__status"
+                >Completed</span
+              >
+              <a class="education__link" href="https://stepik.org/cert/2737099"
+                >View Certificate</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section class="section" id="languages" tabindex="-1">
+          <h2 class="section__title">Languages</h2>
+          <ul class="languages">
+            <li class="languages__item"><strong>Ukrainian:</strong> Native</li>
+            <li class="languages__item"><strong>Czech:</strong> C2 / Fluent</li>
+            <li class="languages__item">
+              <strong>Russian:</strong> C2 / Fluent
+            </li>
+            <li class="languages__item">
+              <strong>English:</strong> A2 / Pre-Intermediate 
+            </li>
+          </ul>
+        </section>
+
+        <section class="section" id="contacts" tabindex="-1">
+          <h2 class="section__title">Contacts</h2>
+          <ul class="contacts">
+            <li class="contacts__item">
+              <strong>Location:</strong>
+              <a
+                class="contacts__link"
+                href="https://www.google.com/maps/place/Prague,+Czech+Republic/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Location: Prague, Czech Republic"
+                title="Prague, Czech Republic"
+              >
+                <svg
+                  class="contacts__icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 21s-7-5.3-7-11a7 7 0 1 1 14 0c0 5.7-7 11-7 11z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="12"
+                    cy="10"
+                    r="2.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <strong>Email:</strong>
+              <a
+                class="contacts__link"
+                href="mailto:krychvas03@gmail.com"
+                aria-label="Email: krychvas03@gmail.com"
+                title="krychvas03@gmail.com"
+              >
+                <svg
+                  class="contacts__icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="3"
+                    y="5"
+                    width="18"
+                    height="14"
+                    rx="3"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M4 7l8 6 8-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <strong>GitHub:</strong>
+              <a
+                class="contacts__link"
+                href="https://github.com/KrychVas"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub profile: KrychVas"
+                title="KrychVas"
+              >
+                <svg
+                  class="contacts__icon contacts__icon--fill"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <strong>Discord:</strong>
+              <a
+                class="contacts__link"
+                href="https://discord.com/users/krychvas"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Discord profile: krychvas"
+                title="krychvas"
+              >
+                <svg
+                  class="contacts__icon contacts__icon--fill"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.317 4.369a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.891.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.331c-1.182 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <strong>Telegram:</strong>
+              <a
+                class="contacts__link"
+                href="https://t.me/Vas_KRy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram: @Vas_KRy"
+                title="@Vas_KRy"
+              >
+                <svg
+                  class="contacts__icon contacts__icon--fill"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <a
+          class="footer__github"
+          href="https://github.com/KrychVas"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit my GitHub profile"
+          title="My GitHub profile"
+        >
+          <img
+            class="footer__github-logo"
+            src="img/github-logo.svg"
+            alt="GitHub logo"
+            width="32"
+            height="32"
+          />
+          <span class="footer__github-name"></span>
+        </a>
+        <span class="footer__year">2026</span>
+        <a
+          class="footer__course"
+          href="https://rs.school/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="RS School website"
+        >
+          <img
+            class="footer__logo"
+            src="img/rs-school-logo.svg"
+            alt="RS School logo"
+            width="120"
+            height="32"
+          />
+        </a>
+      </footer>
+    </div>
+
+    <!-- Theme switcher (light / dark) -->
+    <script src="theme.js"></script>
+
+    <!-- highlight.js core + auto-highlight all <code> blocks (VS Code-like) -->
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11/build/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
